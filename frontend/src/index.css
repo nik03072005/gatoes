@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+/* Professional Color Variables */
+:root {
+  --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --secondary-gradient: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  --success-gradient: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(148, 163, 184, 0.2);
+  --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-heavy: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+}
+
+/* Refined Global Transitions */
+* {
+  transition: all 0.2s ease-out;
+}
+
+/* Professional Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #cbd5e1, #94a3b8);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #94a3b8, #64748b);
+}
+
+/* Professional Glass Effect */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-light);
+}
+
+/* Premium Button Design */
+.btn-gradient {
+  background: var(--primary-gradient);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease-out;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  letter-spacing: 0.025em;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-gradient:active {
+  transform: translateY(0);
+}
+
+/* Clean Professional Background */
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  font-family: 'Inter', 'system-ui', -apple-system, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Subtle Floating Animation */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+.floating {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+/* Professional Card Design */
+.modern-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  transition: all 0.2s ease-out;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.modern-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: rgba(79, 70, 229, 0.2);
+}
+
+/* Refined Pulse Effect */
+@keyframes subtlePulse {
+  0%, 100% { 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(79, 70, 229, 0);
+  }
+  50% { 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 0 4px rgba(79, 70, 229, 0.1);
+  }
+}
+
+.pulse-glow {
+  animation: subtlePulse 3s infinite;
+}
+
+/* Professional Typography */
+.text-gradient-animated {
+  background: linear-gradient(135deg, #1e293b, #475569, #64748b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+/* Status Indicators */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-active {
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.status-inactive {
+  background: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+/* Enhanced Focus States */
+.focus-ring:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Professional Table Styles */
+.table-professional {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-professional th {
+  background: linear-gradient(180deg, #f8fafc, #f1f5f9);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  padding: 1rem 1.5rem;
+}
+
+.table-professional td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-professional tr:hover {
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0.02), rgba(124, 58, 237, 0.02));
+}
