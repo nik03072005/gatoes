@@ -13,7 +13,7 @@ connectDB();
 
 const app = express();
 const allowedOrigins = [
-  "https://gatoes.vercel.app",   // ✅ Production frontend
+  "https://gatoes-mu.vercel.app/",   // ✅ Production frontend
   "http://localhost:5173"        // ✅ Local development frontend
 ];
 
