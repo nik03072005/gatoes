@@ -12,10 +12,13 @@ import { notFound, errorHandler } from './middleware/errorHandler.js';
 connectDB();
 
 const app = express();
+
 const allowedOrigins = [
-  "https://gatoes-mu.vercel.app/",   // ✅ Production frontend
-  "http://localhost:5173"        // ✅ Local development frontend
+  "https://gatoes-bvopzrbjm-nik03072005s-projects.vercel.app",
+  "https://gatoes-mu.vercel.app",
+  "http://localhost:5173"
 ];
+
 
 app.use(
   cors({
@@ -28,15 +31,15 @@ app.use(
         return callback(new Error("CORS policy violation"));
       }
     },
-    credentials: true, // If using cookies or authentication
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
 
+
 // Middleware
-app.use(cors());
 app.use(express.json({ limit: '2mb' }));
 app.use(morgan('dev'));
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
